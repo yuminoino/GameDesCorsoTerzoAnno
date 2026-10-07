@@ -56,6 +56,7 @@ public class DownloadLeaderboardBehaviour : MonoBehaviour
                 if (!string.IsNullOrEmpty(PlayersData[i]))
                 {
                     string[] lineElements = PlayersData[i].Split(',');
+                    PlayersName.Add(lineElements[0]);
                 }
             }
 

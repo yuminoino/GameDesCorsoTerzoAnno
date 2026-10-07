@@ -19,11 +19,11 @@ public class LeaderBoardBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            string completelink = FixedDreamloLink + "/add/" + PlayerName + "/" + PlayerScore.ToString();
-            StartCoroutine(GetRequest(completelink));
-        }
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    string completelink = FixedDreamloLink + "/add/" + PlayerName + "/" + PlayerScore.ToString();
+        //    StartCoroutine(GetRequest(completelink));
+        //}
     }
 
 
