@@ -4,6 +4,7 @@ using System.Collections;
 
 public class DownloadLeaderboardBehaviour : MonoBehaviour
 {
+    public string []PlayersData;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -13,7 +14,13 @@ public class DownloadLeaderboardBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+           
+            StartCoroutine(GetRequest("http://dreamlo.com/lb/6ac61ad78f40bb15a8d2a8d0/quote"));
+
+        }
+
     }
     IEnumerator GetRequest(string uri)
     {
