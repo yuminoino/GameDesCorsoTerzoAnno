@@ -1,10 +1,14 @@
 using UnityEngine;
 using UnityEngine.Networking;
 using System.Collections;
+using System.Collections.Generic;
+
 
 public class DownloadLeaderboardBehaviour : MonoBehaviour
 {
     public string [] PlayersData;
+    public List<string> PlayersName = new List<string>();
+    public List<int> PlayersScore = new List<int>();
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -47,6 +51,7 @@ public class DownloadLeaderboardBehaviour : MonoBehaviour
             }
             string pageContent = webRequest.downloadHandler.text;
             PlayersData = pageContent.Split('\n');
+            
 
         }
     }
