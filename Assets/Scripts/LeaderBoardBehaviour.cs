@@ -15,7 +15,7 @@ public class LeaderBoardBehaviour : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            StartCoroutine(GetRequest("https://docs.unity3d.com/6000.6/Documentation/ScriptReference/Networking.UnityWebRequest.Get.html"));
+            StartCoroutine(GetRequest("http://dreamlo.com/lb/eOYVtUWwCkSo6qpE8Qq2_AI3_5vFO1uUWYMR6kaVIHcA/add/Miao/1000"));
         }
     }
     IEnumerator GetRequest(string uri)
