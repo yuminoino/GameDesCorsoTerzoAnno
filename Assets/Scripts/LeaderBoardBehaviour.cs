@@ -4,6 +4,10 @@ using System.Collections;
 
 public class LeaderBoardBehaviour : MonoBehaviour
 {
+    public string FixedDreamloLink;
+    public string PlayerName;
+    public int PlayerScore;
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -15,7 +19,8 @@ public class LeaderBoardBehaviour : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            StartCoroutine(GetRequest("http://dreamlo.com/lb/eOYVtUWwCkSo6qpE8Qq2_AI3_5vFO1uUWYMR6kaVIHcA/add/Miao/1000"));
+            string completelink = FixedDreamloLink + "/add/" + PlayerName + PlayerScore.ToString();
+            StartCoroutine(GetRequest(completelink));
         }
     }
     IEnumerator GetRequest(string uri)
