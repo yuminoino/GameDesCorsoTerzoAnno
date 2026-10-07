@@ -51,7 +51,14 @@ public class DownloadLeaderboardBehaviour : MonoBehaviour
             }
             string pageContent = webRequest.downloadHandler.text;
             PlayersData = pageContent.Split('\n');
-            
+            for (int i = 0; i < PlayersData.Length; i++)
+            {
+                if (!string.IsNullOrEmpty(PlayersData[i]))
+                {
+                    string[] lineElements = PlayersData[i].Split(',');
+                }
+            }
+
 
         }
     }
