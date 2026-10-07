@@ -4,7 +4,7 @@ using System.Collections;
 
 public class DownloadLeaderboardBehaviour : MonoBehaviour
 {
-    public string []PlayersData;
+    public string [] PlayersData;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -45,6 +45,9 @@ public class DownloadLeaderboardBehaviour : MonoBehaviour
                     Debug.Log(pages[page] + ":\nReceived: " + webRequest.downloadHandler.text);
                     break;
             }
+            string pageContent = webRequest.downloadHandler.text;
+            PlayersData = pageContent.Split('\n');
+
         }
     }
 }
